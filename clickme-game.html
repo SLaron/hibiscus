@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gay ming</title>
+    <link rel="stylesheet" href="design.css">
+    <style>
+        body{
+            background-color: #FBB2BE;
+        }
+    </style>
+</head>
+<body>
+    <p class="title" id="game-text">Click this button as much as you love me</p>
+    <button class="cute-button" id="clicky-kitty" onclick="js_count_click()">
+        <img src="photos/buttonkitty.jpeg" class="pic" id="clicky-kitty-pic">
+        <div>click me zaddy ;p</div>
+    </button>
+    <p class="js-score" class="score"></p>
+
+<script>
+    let count = 0;
+    const result = document.querySelector('.js-score');
+        const bubbleSound = new Audio('audio/bubblepop.mp3');
+        bubbleSound.volume = 0.4; // softer = cuter
+
+    function js_count_click(){
+        count++;
+        console.log(count);
+
+    bubbleSound.currentTime = 0;
+    bubbleSound.play();
+
+    if (count <= 10) {
+    result.innerText = "GO GO CLICK AWAY CUTIEE!!";
+    result.classList.add('score');
+  } 
+  else if (count <= 25) {
+    result.innerText = "that's it??!!";
+  } 
+  else if (count <= 45) {
+    result.innerText = "oh?";
+  } 
+  else if (count <= 70) {
+    result.innerText = "hehehe better";
+  } 
+  else if (count < 99) {
+    result.innerText = "OKAY I GET IT 😳";
+  } 
+  if (count === 99) {
+    result.innerText = "just one more";
+  } 
+    if (count === 100) {
+  window.location.href ="afterclick.html";
+  return; // stops the rest of the function
+}
+}
+</script>
+</body>
+</html>

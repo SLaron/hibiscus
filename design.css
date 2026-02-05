@@ -1,0 +1,60 @@
+body{
+    background-color: #FFC2E8;
+    font-family: monospace;
+    color: deeppink;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.pic{
+    height: 370px;
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 40px;
+}
+.cute-button{
+    font-family: monospace;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: deeppink;
+    border-radius: 30px;
+    color: white;
+    border-width: 20;
+    border-color: white;
+}
+#clicky-kitty{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 380px;
+    width:380px;
+    padding:30px;
+    background-color: #F55064;
+}
+#game-text{
+    color:#FFF8FA;
+}
+#clicky-kitty-pic{
+    height: 250px;
+    width:250px;
+}
+.score{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+

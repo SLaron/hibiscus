@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi bebu</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <p class="title">Hello my babie <33</p>
+    <img src="photos/sillyweclomecat.jpeg" class="pic">
+    <p></p>
+    <button class="cute-button" onclick="jsbuttonclick()"> hullu :3 </button>
+
+<script>
+    const mouse_click = new Audio("audio/mouse-click.mp3");
+    mouse_click.volume = 1;
+function jsbuttonclick(){
+    mouse_click.currentTime = 0;
+    mouse_click.play();
+    window.location.href ="clickme-game.html";
+    return;
+}
+</script>
+</body>
+</html>
