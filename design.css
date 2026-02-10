@@ -57,4 +57,12 @@ body{
     padding-bottom: 5px;
     text-align: center;
 }
-
+.cute-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.1);
+}
+.pause_button{
+    font-size: 28px;
+    cursor: pointer;
+}
