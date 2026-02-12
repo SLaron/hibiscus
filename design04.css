@@ -1,0 +1,10 @@
+body{
+font-family:"Mansalva";
+font-size: 45px;
+text-align: center;
+color: rgb(106, 57, 57);
+background-image: radial-gradient(circle, #fca7eb, #d9c1ff, #bbd7ff, #b2e8ff, #c3f3ff);}
+.byebye-kitty{
+    height: 250px;
+    width: 250px;
+}

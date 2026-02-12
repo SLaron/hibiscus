@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="design03.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>catch moi heart</title>
+    <style>
+     html, body {
+      height: 100%;
+      margin: 0;
+    }
+        body{
+            background-image: radial-gradient(circle, #001b44, #1a1e54, #351e62, #53176b, #71006f);
+        }
+    </style>
 </head>
 <body>
-    
+    <p class="text"id="intro">here is a cute lil game for you </p>
+    <p class="text" id="title">CATCH MY HEART <3</p>
+    <img class="pixelHeart" src="photos/purple_heart.png">
+
+    <button class="start_button" onclick="next_page()">START!!</button>
+
+    <script>
+    const click = new Audio("audio/mouse-click.mp3");
+    function next_page(){
+        click.currentTime = 0;
+        click.play();
+        window.location.href="heart_game.html";
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Catch the Hearts</title>
+  <style>
+    body {
+      background-image: radial-gradient(circle, #d58de5, #c7a0f3, #bbb1fc, #b5c1ff, #b5ceff);
+      margin: 0;
+      overflow: hidden;
+      text-align: center;
+    }
+    #title{
+    margin-top: 25px;
+    font-family: "Jersey 10";
+    color: white;
+    font-size: 80px;
+    text-align: center;
+  color: #ffffff;
+  text-shadow:
+    0 0 4px  rgba(255, 255, 255, 0.6),
+    0 0 8px  rgba(255, 255, 255, 0.4),
+    0 0 16px rgba(255, 255, 255, 0.2);
+
+}
+    #score {
+        font-family: "Instrument Serif";
+        font-size: 40px;
+        color: #ffea00;
+        padding: 10px;
+        margin-top: -80px;
+        text-shadow:
+        0 0 6px  #ffea00,
+        0 0 12px #ffea00,
+        0 0 24px #ffea00;
+    }
+
+    #basket {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 50px;
+    }
+
+    #heart {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      font-size: 40px;
+    }
+    .heart_img{
+        height: 40px;
+        width: 45px;
+    }
+    .letter{
+        height: 80px;
+        width: 80px; 
+    }
+  </style>
+</head>
+<body>
+    <p class="text" id="title">CATCH MY HEART <3</p></3>   
+    <div id="score">Score: 0</div>
+    <div id="heart"> <img src="photos/purple_heart.png" class="heart_img"> </div>
+    <div id="basket"> <img src="photos/letter_catcher.png" class="letter"></div>
+
+  <script>
+    const sound = new Audio("audio/score_sound-effect.mp3");
+    sound.volume = 1;
+    const heart = document.getElementById("heart");
+    const basket = document.getElementById("basket");
+    const scoreText = document.getElementById("score");
+
+    let score = 0;
+    let heartY = 0;
+    let heartX = Math.random() * window.innerWidth;
+
+    heart.style.left = heartX + "px";
+
+    document.addEventListener("mousemove", (e) => {
+      basket.style.left = e.clientX + "px";
+    });
+
+    function drop() {
+      heartY += 4;
+      heart.style.top = heartY + "px";
+
+      const heartRect = heart.getBoundingClientRect();
+      const basketRect = basket.getBoundingClientRect();
+
+      if (
+        heartRect.bottom >= basketRect.top &&
+        heartRect.left >= basketRect.left &&
+        heartRect.right <= basketRect.right
+      ) {
+        score++;
+        scoreText.textContent = "Score: " + score;
+        sound.currentTime = 0;
+        sound.play();
+        if(score === 10){
+            next_page();
+        }
+        resetHeart();
+      }
+
+      if (heartY > window.innerHeight) {
+        resetHeart();
+      }
+    }
+
+    function resetHeart() {
+      heartY = 0;
+      heartX = Math.random() * (window.innerWidth - 40);
+      heart.style.left = heartX + "px";
+    }
+
+    setInterval(drop, 20);
+
+    function next_page(){
+        window.location.href="fin_game.html";
+    }
+  </script>
+
+</body>
+</html>

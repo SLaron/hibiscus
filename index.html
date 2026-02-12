@@ -16,11 +16,11 @@
     const mouse_click = new Audio("audio/mouse-click.mp3");
     mouse_click.volume = 1;
     const bg_music = new Audio("audio/kitty_song.mp3");
-    bg_music.volume = 1;
     let music_status = 0;
     const status = document.querySelector('.js-pause')
 function jsbuttonclick(){
     mouse_click.currentTime = 0;
+    bg_music.loop = true;
     mouse_click.play();
     bg_music.play();
     status.innerText="⏸️";
