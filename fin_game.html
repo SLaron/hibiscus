@@ -11,7 +11,16 @@
 </head>
 <body>
     <p>Happy Valentine's day, dear valentine :3</p>
-    <img src="photos/byebye-kitty.png" class="byebye-kitty">
+    <img src="photos/byebye-kitty.png" class="byebye-kitty" onclick="js_cat_touch()">
     <p>I'm glad we met in this strange little world <3 </p>
+
+        <script>
+            const meow = new Audio("audio/meow-meow.mp3");
+            meow.volume = 1;
+            meow.currentTime = 0
+            function js_cat_touch(){
+                meow.play();
+            }
+        </script>
 </body>
 </html>
