@@ -12,21 +12,32 @@
     <p></p>
     <button class="cute-button" onclick="jsbuttonclick()"> hullu :3 </button>
     <p class="js-pause pause_button" onclick="update_music()"></p>
+
+
+
+
 <script>
     const mouse_click = new Audio("audio/mouse-click.mp3");
     mouse_click.volume = 1;
     const bg_music = new Audio("audio/kitty_song.mp3");
     let music_status = 0;
     const status = document.querySelector('.js-pause')
-function jsbuttonclick(){
+
+//function to go to next page 
+
+    function jsbuttonclick(){
     mouse_click.currentTime = 0;
     bg_music.loop = true;
     mouse_click.play();
-    bg_music.play();
+    // un-comment the code below when done with rick roll
+    //bg_music.play();
     status.innerText="⏸️";
-    window.open("clickme-game.html", "_blank");
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
     return;
 }
+
+//function for music stopping/playing
+
 function update_music(){
     if(music_status === 0){
     bg_music.pause();
