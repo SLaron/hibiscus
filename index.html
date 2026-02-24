@@ -28,11 +28,10 @@
     function jsbuttonclick(){
     mouse_click.currentTime = 0;
     bg_music.loop = true;
+    bg_music.play();
     mouse_click.play();
-    // un-comment the code below when done with rick roll
-    //bg_music.play();
     status.innerText="⏸️";
-    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    window.open("clickme-game.html", "_blank");
     return;
 }
 
